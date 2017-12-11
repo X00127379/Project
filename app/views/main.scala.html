@@ -6,9 +6,10 @@
 <html lang="en">
 <head>
     @* Here's where we render the page title `String`. *@
-    <title>Real Gourmet Burger</title>
-    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned(" stylesheets/main.css")">
-    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned(" stylesheets/media-queries.css")">
+    <title>Gourmet Kitchen</title>
+    <!--<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">-->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/media-queries.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned(" images/logo.png")">
     <script src="@routes.Assets.versioned(" javascripts/hello.js")" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,11 +18,7 @@
     <![endif]-->
     <!-- Latest compiled and minified CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
@@ -30,13 +27,9 @@
 
 </head>
     <body>
-    <nav class="navbar navbar-inverse">
-            <!-- nav header/ branding -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Product Catalogue</a>
-            </div>
-            <!-- List containing nav links -->
-            <ul class="nav navbar-nav">
+        <nav>
+            <a href="/"><img src="@routes.Assets.versioned("images/logo.png")"></a>
+            <ul id="mainNav">
                 <li @if(title == "Home"){class="active"}>
                     <a href="@routes.HomeController.index()">Home</a>
                 </li>
@@ -62,8 +55,10 @@
 
                 <li><a href="@routes.ReservationsController.reservations()">Reservations</a></li>        
                 <li><a href="@routes.AdminController.staffView()">Staff View</a></li>
+
+                <li><a href="@routes.ContactusController.contactus()">Contact Us</a></li>
             </ul>
-    </nav>
+        </nav>
     
   
 
@@ -76,21 +71,17 @@
     <div class="wrapper">
         <div class="row">
             <div class="col-4 col-m-4">
-                <h4><span class="glyphicon glyphicon-home">&nbsp;Real Gourmet Burger</span></h4>
-                <p>101 Terenure Road East</p>
-                <p>Terenure, Dublin 6</p>
-                <p><span class="glyphicon glyphicon-phone-alt">&nbsp;01-492-0222</span></p>
-                <p><span class="glyphicon glyphicon-envelope">&nbsp;realterenure&#64;gmail.com</span></p>
+                <h4><span class="glyphicon glyphicon-home">&nbsp;Gourmet Kitchen</span></h4>
+                <p>404 Collinsavenue Whitehall</p>
+                <p>WhiteHall, Dublin 9</p>
+                <p><span class="glyphicon glyphicon-phone-alt">&nbsp;12345678</span></p>
+                <p><span class="glyphicon glyphicon-envelope">&nbsp;kitchen&#64;gmail.com</span></p>
             </div>
             <div class="col-4 col-m-4">
                 <h4>Opening Hours</h4>
-                <p>Monday: 17:00 - 21:30</p>
-                <p>Tuesday - Thursday: 12:00 - 21:30</p>
-                <p>Friday - Saturday: 12:00 - 22:00</p>
-                <p>Sunday: 12:00 - 21:30</p>
-            </div>
-            <div class="col-4 col-m-4">
-                <a href="http://www.facebook.com/RealGBT/" target="_blank"><img src="@routes.Assets.versioned(" images/fbIcon.png")"></a>
+                <p>Monday Thursday: 16:30 - 00:30</p>
+                <p>Friday - Saturday: 16:00 - 00:00</p>
+                <p>Sunday: 16:00 - 23:30</p>
             </div>
         </div>
     </div>

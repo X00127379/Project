@@ -42,10 +42,10 @@
               </div>
           @for(p <- products) {
               <tr>
-                  @if(env.resource("public/images/productImages/" + p.getId + ".jpg").isDefined) {
-                      <td><img src="/assets/images/productImages/@(p.getId + ".jpg")"/></td>
+                  @if(env.resource("public/images/" + p.getId + ".jpg").isDefined) {
+                      <td><img src="/assets/images/@(p.getId + ".jpg")"/></td>
                   } else {
-                      <td><img src="/assets/images/productImages/noImage.png"/></td>
+                      <td><img src="/assets/images/noImage.png"/></td>
                   }
                   <td>@p.getName</td>
                   <td>@p.getCategory.getName</td>

@@ -1,4 +1,7 @@
-c
+# --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
+
+# --- !Ups
 insert into category (id,name) values ( 1,'Rice' );
 insert into category (id,name) values ( 2,'Chicken' );
 insert into category (id,name) values ( 3,'Curry' );
@@ -19,6 +22,6 @@ insert into product (id,category_id,name,description,stock,price) values ( 10,5,
 insert into product (id,category_id,name,description,stock,price) values ( 11,4,'Veg','Veg food',5,8.00 );
 insert into product (id,category_id,name,description,stock,price) values ( 12,2,'Chicken Ball','Chicken Ball',50,29.00 );
 
-insert into user (email,name,password,role) values ( 'admin@products.com', 'Alice Admin', 'password', 'admin' );
-insert into user (email,name,password,role) values ( 'manager@products.com', 'Bob Manager', 'password', 'manager' );
-insert into user (email,name,password,role) values ( 'customer@products.com', 'Charlie Customer', 'password', 'customer' );
+insert into user (email,name,password,role) values ( 'admin@products.com', 'Jayson', 'password', 'admin' );
+insert into user (email,name,password,role) values ( 'staff@products.com', 'Bob', 'password', 'manager' );
+insert into user (email,name,password,role) values ( 'customer@products.com', 'John', 'password', 'customer' );

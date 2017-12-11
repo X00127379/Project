@@ -10,9 +10,6 @@ import views.html.*;
 
 import javax.inject.Inject;
 
-/**
- * Created by deni on 18/04/2017.
- */
 public class ContactusController  extends Controller{
 
     private FormFactory formFactory;

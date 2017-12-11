@@ -3,14 +3,14 @@
     "",
     "\\app",
     "\\app\\controllers",
-    "\\app\\filters",
+    "\\app\\views",
+    "\\app\\views\\admin",
     "\\conf",
-    "\\data",
-    "\\lib",
+    "\\conf\\evolutions",
+    "\\conf\\evolutions\\default",
     "\\public",
-    "\\public\\images",
-    "\\public\\images\\productImages"
+    "\\public\\images"
   ],
-  "SelectedNode": "\\public\\images (2)",
+  "SelectedNode": "\\app\\views\\admin\\products.scala.html",
   "PreviewInSolutionExplorer": false
 }

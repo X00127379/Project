@@ -4,20 +4,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        @* Here's where we render the page title `String`. *@
-        <title>@title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-    </head>
+<head>
+    @* Here's where we render the page title `String`. *@
+    <title>Gourmet Kitchen</title>
+    <!--<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">-->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/media-queries.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned(" images/logo.png")">
+    <script src="@routes.Assets.versioned(" javascripts/hello.js")" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
     <body>
-    <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/admin/products">Product Admin</a>
-            </div>
-            <ul class="nav navbar-nav">
+    <nav >
+        <title> Gourmet Kitchen</title>
+            <ul id="mainNav">
                 <li @if(title == "Products"){class="active"}>
                     <a href="@routes.AdminController.products()">Products</a>
                 </li>
@@ -36,7 +48,7 @@
             </ul>
     </nav>
     
-    <div class="container-fluid">
+    <div id="pageWrap">
         @* And here's where we render the `Html` object containing
          * the page content. *@
         @content
@@ -46,8 +58,5 @@
      </footer>
 
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
 </html>
 
